@@ -12,7 +12,7 @@ require('dotenv').config()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect('mongodb+srv://new-user5:12345@crud.i7aza.mongodb.net/merntutorial?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
 })
 
